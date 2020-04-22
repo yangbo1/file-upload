@@ -17,6 +17,7 @@ import java.util.*;
  * @time: 2020/4/20 10:37
  */
 @RestController()
+@CrossOrigin("*")
 @RequestMapping("/file")
 public class FileUploadControllor {
 
