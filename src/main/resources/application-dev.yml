@@ -1,0 +1,15 @@
+server:
+  port: 8082
+spring:
+  servlet:
+    multipart:
+      #单文件上传最大容量
+      max-file-size: 5MB
+      #多文件
+      max-request-size: 50MB
+upload:
+  #  location: /usr/upload-files
+  location: D:\\upload-files\\
+remote:
+  #  url: http://101.132.162.217:8888
+  url: localhost:8888/
