@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#submitBtn").click(function(){
+                var formdata = new FormData();
+                formdata.append('file', $('#filename').get(0).files[0]);
+                $.ajax({
+                    url: "http://101.132.162.217:8082/file/upload",
+                    type: "post",
+                    processData:false,
+                    contentType: false,
+                    data: formdata,
+                    success:function (data) {
+                        console.log(data.data)
+                    }
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+<form enctype="multipart/form-data">
+    <input type="file" name="fileName" id="filename">
+    <input type="button" id="submitBtn" value="上传"/>
+</form>
+</body>
+</html>
